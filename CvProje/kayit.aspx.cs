@@ -17,7 +17,7 @@ public partial class bireysel : System.Web.UI.Page
         if (DropDownList2.SelectedIndex>=0)
         {
             
-            //form bilgilerini gönderiyoruz
+            //form bilgilerini gönderiyoruz. v1
 
                 Response.Redirect("onay.aspx?adtxt=" + adtxt.Text + "&soyadtxt=" + soyadtxt.Text + "&emailtxt=" + emailtxt.Text + "&tctxt=" + tctxt.Text + "&bolum=" + DropDownList2.SelectedValue + "&sinif=" +  "&sfr="+sfrtxt.Text);
                         //Response.Redirect("kayit.aspx?adtxt="+ adtxt.Text+"&emailtxt="+emailtxt.Text+"&teltxt="+teltxt.Text+"&cinsiyet="+cinsiyet+"&kurs="+DropDownList3.SelectedValue + "&onay="+onayli+"&isdurumu="+isdurumu+"&sehir="+ DropDownList1.SelectedValue+"&ozeltxt="+ozeltxt.Text);            
