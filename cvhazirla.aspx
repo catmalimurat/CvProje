@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="kayit.aspx.cs" Inherits="bireysel" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="cvhazirla.aspx.cs" Inherits="cvhazirla" %>
+
 
 <!DOCTYPE html>
 
@@ -521,7 +522,7 @@
 			<div class="layout--container">
 				<div style="background: #383d61 url('assets/images/design/patterns/pattern-dark.png')" class="auto-style2">
 					<div class="container">
-						<h1 class="auto-style1">MEZUN ÖĞRENCİ KARİYER TAKİP SİSTEMİ</h1>
+						<h1 class="auto-style1">MEZUN ÖĞRENCİ CV HAZIRLAMA</h1>
 					</div>
 				</div>
 				<%--asıl kısım--%>
