@@ -541,10 +541,6 @@
                                                                    <ContentTemplate>--%>
                                                            <div class="row">                                                                  
 																<div class="col-md-6 col-xs-12">
-																	 <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="Ad" DataValueField="Kod" CssClass="form-control">
-                                                                         <asp:ListItem Selected="True">Bölüm Seçiniz</asp:ListItem>
-                                                                     </asp:DropDownList>
-                                                                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:KariyerDbConnectionString %>" SelectCommand="SELECT * FROM [TblBolumler]"></asp:SqlDataSource>
                                                                     <br />
 
 																</div>
@@ -560,13 +556,13 @@
 															<div class="row">
 																<div class="col-md-6 col-xs-12">
 																	<label class="field -wide">
-                                                                        <asp:TextBox ID="adtxt" runat="server" placeholder="Ad" required=""></asp:TextBox>
+                                                                        <asp:TextBox ID="tctxt" runat="server" placeholder="T.C. Kimlik No" required=""></asp:TextBox>
 																		<%--<input type="text" placeholder="Ad Soyad" name="ad" required="">--%>
 																	</label>
 																</div>
 																<div class="col-md-6 col-xs-12">
 																	<label class="field -wide">
-                                                                        <asp:TextBox ID="soyadtxt" runat="server" placeholder="Soyad" required=""></asp:TextBox>
+                                                                        <asp:TextBox ID="egitimtxt" runat="server" placeholder="Eğitimler" required=""></asp:TextBox>
 																		<%--<input type="email" placeholder="Email" name="email" required="">--%>
 																	</label>
 																</div>
@@ -574,13 +570,13 @@
 															<div class="row">
 																<div class="col-md-6 col-xs-12">
 																	<label class="field -wide">
-                                                                        <asp:TextBox ID="tctxt" runat="server" placeholder="T.C. Kimlik No" required=""></asp:TextBox>
+                                                                        <asp:TextBox ID="bcrtxt" runat="server" placeholder="Beceriler" required=""></asp:TextBox>
 																		<%--<input type="text" placeholder="Telefon" name="tel" required="">--%>
 																	</label>
 																</div>
 																<div class="col-md-6 col-xs-12">
 																	<label class="field -wide">
-                                                                        <asp:TextBox ID="emailtxt" runat="server" placeholder="Email" required="" TextMode="Email"></asp:TextBox>
+                                                                        <asp:TextBox ID="prjtxt" runat="server" placeholder="Projeler" required="" TextMode="Email"></asp:TextBox>
 																		<%--<input type="email" placeholder="Email" name="email" required="">--%>
 																	</label>
 																</div>
@@ -594,14 +590,14 @@
 																
                                                                 <div class="col-md-6 col-xs-12">
 <label class="field -wide">
-                                                                        <asp:TextBox ID="sfrtxt" runat="server" placeholder="Şifre" required="" TextMode="Password"></asp:TextBox>
+                                                                        <asp:TextBox ID="dltxt" runat="server" placeholder="Dil" required="" TextMode="Password"></asp:TextBox>
 																		<%--<input type="email" placeholder="Email" name="email" required="">--%>
 																	</label>
 																	<%--</label>--%><br />
 																</div>
                                                                   <div class="col-md-6 col-xs-12">
                                                                       <label class="field -wide">
-																	  <asp:TextBox ID="sfrttxt" runat="server" placeholder="Şifre Tekrar Giriniz" required="" TextMode="Password"></asp:TextBox>
+																	  <asp:TextBox ID="dgrtxt" runat="server" placeholder="Diğer" required="" TextMode="Password"></asp:TextBox>
 																		<%--<input type="email" placeholder="Email" name="email" required="">--%>
 																	</label>
 																</div>
@@ -627,10 +623,8 @@
 																</div>
 																<div class="col-md-12 col-xs-12"><br />
 																	<div class="contact_form--submit">
-                                                                        <asp:CompareValidator ID="CompareValidator1" runat="server" BorderColor="#383D61" ControlToCompare="sfrtxt" ControlToValidate="sfrttxt" ErrorMessage="Şifreler aynı değil. Lütfen kontrol ediniz." ForeColor="#DD482A"></asp:CompareValidator>
                                                                         <asp:Button ID="Button1" runat="server" Text="Kaydet" CssClass="button -menu_size -waikawa_gray -bordered" OnClick="Button1_Click" />
 																		<%--<button class="button -menu_size -waikawa_gray -bordered" type="submit">Kaydet</button>    --%> 
-                                                                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Geçerli bir Kimlik Numarası giriniz" ControlToValidate="tctxt" ValidationExpression="^[1-9]{1}[0-9]{9}[0,2,4,6,8]{1}$" BorderColor="#383D61" ForeColor="#DD482A"></asp:RegularExpressionValidator>                                                        
 																	    <br />
 																	</div>
 																</div>
