@@ -13,7 +13,7 @@ public partial class bireysel : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        //19.06.2021
+        //19.06.2021 test işlemleri
         if (DropDownList2.SelectedIndex>=0)
         {
             

@@ -11,6 +11,7 @@ public partial class kayit : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         //öğrenci kaydı
+        //test işlemleri
          string tc = Request.QueryString["tctxt"];
         string egt = Request.QueryString["egitimtxt"];
         string bcr = Request.QueryString["bcrtxt"];
