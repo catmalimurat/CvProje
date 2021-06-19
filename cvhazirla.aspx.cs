@@ -16,7 +16,8 @@ public partial class cvhazirla : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        //cv sayfası eklendi
+        //cv sayfası eklendi 19/06/2021
+        //test işlemleri
         
 
             //form bilgilerini gönderiyoruz...
