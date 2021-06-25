@@ -9,8 +9,25 @@ public partial class cvhazirla : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-       
+        if (Session["user"]==null)
+        {
+            Response.Redirect("uyegiris.aspx");
+        }
+        else { 
         tctxt.Text = Session["user"].ToString();
+        CvCRUD cvkontrol = new CvCRUD();
+        Cv cvvar = new Cv();
+        cvvar = cvkontrol.cvvarmi(tctxt.Text);
+        if ((cvvar!=null)&&(!IsPostBack))
+        {
+            egitimtxt.Text = cvvar.egt;
+            bcrtxt.Text = cvvar.bcr;
+            prjtxt.Text = cvvar.pjr;
+            diltxt.Text = cvvar.dl;
+            dgrtxt.Text = cvvar.dgr;
+        }
+
+        }
     }
 
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -15,14 +16,14 @@ public class CvCRUD
         // TODO: Add constructor logic here
         //
     }
+            DbCRUD dbcrud = new DbCRUD();
     public bool cvkaydet(Cv cv)
-    {
+                   {
         try
         {
 
-            DbCRUD dbcrud = new DbCRUD();
             dbcrud.baglanti.Open();
-            SqlCommand komut = new SqlCommand("INSERT INTO TblCv (Tc_Kimlik,Eğitim,Beceiler,Projeler,Dil,Diğer) values (@p1,@p2,@p3,@p4,@p5,@p6)", dbcrud.baglanti);
+            SqlCommand komut = new SqlCommand("INSERT INTO TblCv (Tc_Kimlik,Eğitim,Beceriler,Projeler,Dil,Diğer) values (@p1,@p2,@p3,@p4,@p5,@p6)", dbcrud.baglanti);
         komut.Parameters.AddWithValue("@p1", cv.tc);
         komut.Parameters.AddWithValue("@p2", cv.egt);
         komut.Parameters.AddWithValue("@p3", cv.bcr);
@@ -31,7 +32,7 @@ public class CvCRUD
         komut.Parameters.AddWithValue("@p6", cv.dgr);
  komut.ExecuteNonQuery();
             dbcrud.baglanti.Close();
-        }
+    }
         catch (Exception)
         {
 
@@ -41,4 +42,28 @@ public class CvCRUD
        
         return true;
     }
+
+
+    public Cv cvvarmi(string gtc)
+    {
+
+        dbcrud.baglanti.Open();
+        Cv cvv = new Cv();
+        SqlCommand komut = new SqlCommand("Select * from TblCv Where TC_Kimlik=@p1 ", dbcrud.baglanti);
+        komut.Parameters.AddWithValue("@p1", gtc);
+        DataTable dt = new DataTable();
+        dt.Load(komut.ExecuteReader());
+        if(dt.Rows.Count>0)
+        {
+            cvv.egt = dt.Rows[0]["Eğitim"].ToString();
+            cvv.bcr= dt.Rows[0]["Beceriler"].ToString();
+            cvv.pjr= dt.Rows[0]["Projeler"].ToString();
+            cvv.dl= dt.Rows[0]["Dil"].ToString();
+            cvv.dgr=dt.Rows[0]["Diğer"].ToString();
+        }
+        dbcrud.baglanti.Close();
+        return cvv;
+
+    }
+
 }

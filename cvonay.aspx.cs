@@ -32,7 +32,7 @@ public partial class kayit : System.Web.UI.Page
         if (   cvcrud.cvkaydet(cv))
         {
 
-         sonuc.InnerHtml = "Cv niz kaydedilmiştir";
+         sonuc.InnerHtml = "Cv niz kaydedilmiştir. Cv düzenleme/görüntüleme için <a href='cvhazirla.aspx'>Tıklayınız.</a>";
         }
         else
         {
