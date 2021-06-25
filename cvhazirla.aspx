@@ -107,6 +107,7 @@
 												</div>
 											</div>
 										</div>
+                                          <a href="uyegiris.aspx?kapat=1">Oturumu Kapat</a> 
 										<!--<a href="contact_us.html"><button class="button -waikawa_gray -bordered -menu_size"><span class="button--inner">Get a Quote</span></button></a>-->
 									</div>
 								</div>
@@ -562,7 +563,7 @@
 																</div>
 																<div class="col-md-6 col-xs-12">
 																	<label class="field -wide">
-                                                                        <asp:TextBox ID="egitimtxt" runat="server" placeholder="Eğitimler" required=""></asp:TextBox>
+                                                                        <asp:TextBox ID="egitimtxt" TextMode="MultiLine" runat="server" placeholder="Eğitimler" required=""></asp:TextBox>
 																		<%--<input type="email" placeholder="Email" name="email" required="">--%>
 																	</label>
 																</div>
@@ -570,13 +571,13 @@
 															<div class="row">
 																<div class="col-md-6 col-xs-12">
 																	<label class="field -wide">
-                                                                        <asp:TextBox ID="bcrtxt" runat="server" placeholder="Beceriler" required=""></asp:TextBox>
+                                                                        <asp:TextBox ID="bcrtxt" runat="server" placeholder="Beceriler" TextMode="MultiLine" required=""></asp:TextBox>
 																		<%--<input type="text" placeholder="Telefon" name="tel" required="">--%>
 																	</label>
 																</div>
 																<div class="col-md-6 col-xs-12">
 																	<label class="field -wide">
-                                                                        <asp:TextBox ID="prjtxt" runat="server" placeholder="Projeler" required="" TextMode="Email"></asp:TextBox>
+                                                                        <asp:TextBox ID="prjtxt" runat="server" placeholder="Projeler" required="" TextMode="MultiLine"></asp:TextBox>
 																		<%--<input type="email" placeholder="Email" name="email" required="">--%>
 																	</label>
 																</div>
@@ -590,14 +591,14 @@
 																
                                                                 <div class="col-md-6 col-xs-12">
 <label class="field -wide">
-                                                                        <asp:TextBox ID="dltxt" runat="server" placeholder="Dil" required="" TextMode="Password"></asp:TextBox>
+                                                                        <asp:TextBox ID="diltxt" runat="server" placeholder="Dil" required="" TextMode="MultiLine"></asp:TextBox>
 																		<%--<input type="email" placeholder="Email" name="email" required="">--%>
 																	</label>
 																	<%--</label>--%><br />
 																</div>
                                                                   <div class="col-md-6 col-xs-12">
                                                                       <label class="field -wide">
-																	  <asp:TextBox ID="dgrtxt" runat="server" placeholder="Diğer" required="" TextMode="Password"></asp:TextBox>
+																	  <asp:TextBox ID="dgrtxt" runat="server" placeholder="Diğer" required="" TextMode="MultiLine"></asp:TextBox>
 																		<%--<input type="email" placeholder="Email" name="email" required="">--%>
 																	</label>
 																</div>

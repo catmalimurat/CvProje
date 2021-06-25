@@ -9,7 +9,8 @@ public partial class cvhazirla : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        tctxt.Text = Session["tc"].ToString();
+       
+        tctxt.Text = Session["user"].ToString();
     }
 
 
@@ -22,7 +23,7 @@ public partial class cvhazirla : System.Web.UI.Page
 
             //form bilgilerini gönderiyoruz...
 
-            Response.Redirect("cvonay.aspx?tctxt=" + tctxt.Text + "&egitimtxt=" + egitimtxt.Text + "&bcrtxt=" + bcrtxt.Text + "&pjrtxt=" +prjtxt.Text + "&dl=" + dltxt + "&dgr=" +  dgrtxt.Text);
+            Response.Redirect("cvonay.aspx?tctxt=" + tctxt.Text + "&egitimtxt=" + egitimtxt.Text + "&bcrtxt=" + bcrtxt.Text + "&pjrtxt=" +prjtxt.Text + "&diltxt=" + diltxt.Text + "&dgrtxt=" +  dgrtxt.Text);
             //Response.Redirect("kayit.aspx?adtxt="+ adtxt.Text+"&emailtxt="+emailtxt.Text+"&teltxt="+teltxt.Text+"&cinsiyet="+cinsiyet+"&kurs="+DropDownList3.SelectedValue + "&onay="+onayli+"&isdurumu="+isdurumu+"&sehir="+ DropDownList1.SelectedValue+"&ozeltxt="+ozeltxt.Text);            
 
         

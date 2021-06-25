@@ -44,4 +44,19 @@ SqlCommand komut = new SqlCommand("INSERT INTO TblOgrenciler (O_Tc_Kimlik,O_Ad,O
         
         return true;
     }
+    public bool uyemi(string gtc, string sfr)
+    {
+        dbcrud.baglanti.Open();
+        SqlCommand komut = new SqlCommand("Select Count( O_Tc_Kimlik) from TblOgrenciler Where O_Tc_Kimlik=@p1 and O_Sifre=@p2", dbcrud.baglanti);
+        komut.Parameters.AddWithValue("@p1", gtc);
+        komut.Parameters.AddWithValue("@p2", sfr);
+        int ks = Convert.ToInt16(komut.ExecuteScalar());
+        if (ks > 0)
+        {
+            return true;
+        }
+        dbcrud.baglanti.Close();
+        return false;
+
+    }
 }
