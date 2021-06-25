@@ -29,7 +29,21 @@ public partial class kayit : System.Web.UI.Page
         cv.pjr = pjr;
         cv.dl = dil;
         cv.dgr = dgr;
-        if (   cvcrud.cvkaydet(cv))
+        if (cvcrud.cvvarmi(tc).egt!=null)
+        {
+            if (cvcrud.cvguncelle(cv))
+            {
+                sonuc.InnerHtml = "Cv niz güncellenmiştir. Cv düzenleme/görüntüleme için <a href='cvhazirla.aspx'>Tıklayınız.</a>";
+            }
+            else
+            {
+                sonuc.InnerHtml = "Cv kayıt hatası. Lütfen tekrar deneyiniz";
+            }
+        }
+            
+        
+        else { 
+        if ( cvcrud.cvkaydet(cv))
         {
 
          sonuc.InnerHtml = "Cv niz kaydedilmiştir. Cv düzenleme/görüntüleme için <a href='cvhazirla.aspx'>Tıklayınız.</a>";
@@ -39,7 +53,7 @@ public partial class kayit : System.Web.UI.Page
             sonuc.InnerHtml = "Cv kayıt hatası. Lütfen tekrar deneyiniz";
         }
      
-       
+       }
        
        
 

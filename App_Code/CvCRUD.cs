@@ -66,4 +66,19 @@ public class CvCRUD
 
     }
 
+public bool cvguncelle(Cv cv)
+    {
+        dbcrud.baglanti.Open();
+        SqlCommand guncelle = new SqlCommand("update TblCv set Eğitim=@p2,Beceriler=@p3,Projeler=@p4,Dil=@p5,Diğer=@p6 where Tc_Kimlik=@p1", dbcrud.baglanti);
+        guncelle.Parameters.AddWithValue("@p1", cv.tc);
+        guncelle.Parameters.AddWithValue("@p2", cv.egt);
+        guncelle.Parameters.AddWithValue("@p3", cv.bcr);
+        guncelle.Parameters.AddWithValue("@p4", cv.pjr);
+        guncelle.Parameters.AddWithValue("@p5", cv.dl);
+        guncelle.Parameters.AddWithValue("@p6", cv.dgr);
+        guncelle.ExecuteNonQuery();
+        dbcrud.baglanti.Close();
+        return true;
+    }
+
 }

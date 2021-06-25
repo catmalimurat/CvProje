@@ -557,7 +557,7 @@
 															<div class="row">
 																<div class="col-md-6 col-xs-12">
 																	<label class="field -wide">
-                                                                        <asp:TextBox ID="tctxt" runat="server" placeholder="T.C. Kimlik No" required=""></asp:TextBox>
+                                                                        <asp:TextBox ID="tctxt" runat="server" placeholder="T.C. Kimlik No" required="" Enabled="false"></asp:TextBox>
 																		<%--<input type="text" placeholder="Ad Soyad" name="ad" required="">--%>
 																	</label>
 																</div>
