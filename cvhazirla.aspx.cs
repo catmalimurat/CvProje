@@ -9,7 +9,7 @@ public partial class cvhazirla : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        tctxt.Text = Session["tc"].ToString();
     }
 
 
